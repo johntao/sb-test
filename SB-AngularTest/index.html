@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.8.3/angular-touch.min.js" integrity="sha512-f7nfAhahVgkfGWX/Ya3gmMaz9b2nSRI9Q3eftG+NH4W8NEOgWen8Rkv/p5ZL9WTTewoscB+dtO0YXNoJOxIv+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/angular-ui/bower-ui-grid/ui-grid.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/angular-ui/bower-ui-grid/ui-grid.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="MainCtrl as $ctrl">
+      <label for="search-btn">Search: </label><input id="search-btn" ng-model='filterValue' ng-change='filter()'/>
+      <button ng-click='resetBalance()'>Reset Balance</button>
+      <div id="grid1" ui-grid="gridOptions" ui-grid-edit class="grid"></div>
+    </div>
+  </body>
+</html>
